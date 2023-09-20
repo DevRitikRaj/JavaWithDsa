@@ -9,9 +9,7 @@ public class PrimeNumber {
         while(div<n){
             if(n%div==0){
                 count++;
-                break;
-
-                
+                break;                
             }
             div=div+1;
         }
