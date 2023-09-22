@@ -26,9 +26,9 @@ public class Conversion {
         //  l=l*2;
         //  System.out.println(l);
 
-        byte b=5;
-        b= (byte) b*2;
-        System.out.println(b);
+        // byte b=5;
+        // b= (byte) b*2;
+        // System.out.println(b);
 
 
     }
