@@ -16,6 +16,7 @@ public class Simple {
         marks[2]=100;
         
 
+
         System.out.println("Phy :"+marks[0]);
         System.out.println("Chem : "+marks[1]);
         System.out.println("Math : "+marks[2]);
