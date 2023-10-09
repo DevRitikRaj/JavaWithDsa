@@ -1,5 +1,4 @@
 package Arrays;
-
 class FirstP{  
 public static void main(String args[]){  
 int a[]=new int[5];//declaration and instantiation  
