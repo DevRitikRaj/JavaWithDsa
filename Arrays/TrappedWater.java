@@ -1,5 +1,7 @@
 package Arrays;
 
+import java.util.Scanner;
+
 public class TrappedWater {
 
     public static int trappWater(int height[]){
@@ -36,8 +38,19 @@ public class TrappedWater {
     }
 
     public static void main(String [] args){
-        int height[]={4,2,0,6,3,2,5};
-        System.out.println(trappWater(height));
+        // int height[]={4,2,0,6,3,2,5};
+        // System.out.println(trappWater(height));
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter theS of the wall");
+        int n=sc.nextInt();
+        int height[]=new int[n];
+        System.out.println("Enter the height of the Bar");
+        for(int i=0;i<n;i++){
+            height[i]=sc.nextInt();
+        }
+        System.out.println("The Total water is trapped is "+trappWater(height));
+
     }
     
 }
