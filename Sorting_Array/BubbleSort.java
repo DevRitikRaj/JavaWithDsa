@@ -7,8 +7,16 @@ public class BubbleSort {
 
     public static void bubble(int arr[]){
          int swap=0;
+         int count=0;
+
+
         for(int turn=0;turn<arr.length;turn++){
+            count++;
+            System.out.println(count);
+            
             for(int j=0;j<arr.length-1-turn;j++){
+                count++;
+                System.out.println(count);
                 
 
                 if(arr[j]>arr[j+1]){
@@ -27,6 +35,7 @@ public class BubbleSort {
             }
         }
         System.out.println("The Number of swap is "+swap);
+        System.out.println("The Number of Interation  is "+count);
     }
 
     public static void PrintArr(int arr[]){
