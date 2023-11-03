@@ -6,7 +6,7 @@ public class Search_Matrix {
         int row=0,col=matrix.length-1;
         while (row<matrix.length && col>=0) {
             if(matrix[row][col]==key){
-                System.out.println(+key+" Found in ("+row+" ,"+col+")");
+                System.out.println(+key+"Found in ("+row+" ,"+col+")");
                 return true;
             }
             else if(key<matrix[row][col]){
@@ -18,7 +18,7 @@ public class Search_Matrix {
             
         }
         System.out.println("Key Not Find");
-        return false;
+        return false; 
 
     }
 
