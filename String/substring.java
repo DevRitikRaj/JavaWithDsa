@@ -11,6 +11,7 @@ public class substring {
         return substr;
     }
     public static void main (String [] args){
+        
         String str="HelloWorld";
         System.out.println(substr(str, 0, 5));
     }
