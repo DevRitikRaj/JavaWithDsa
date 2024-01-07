@@ -15,9 +15,9 @@ public class Update {
 
     }
     public static void main(String [] args){
-        int n=10;
+        int n=14;
         int i=2;
-        int newBit=1;
+        int newBit=0;
         System.out.println(Upd(n, i, newBit));
     }
     
