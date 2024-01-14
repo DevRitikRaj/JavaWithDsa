@@ -3,9 +3,9 @@ package Oops;
 public class staticspractice {
 
     public static void main(String [] args){
-        Test t= new Test();
-        t.changeB();
-        System.out.println(Test.a+ Test.b);
+        Test5 t= new Test5();
+        Test5.changeB();
+        System.out.println(Test5.a+Test5.c);
 
         // Test.a = 10   and   Test.b =0;
 
@@ -13,12 +13,12 @@ public class staticspractice {
     
 }
 
-class Test{
+class Test5{
     static int a=10;
-    static int b;
+    static int c;
 
     static void changeB(){
-        int b= a*3;
+        c= a*3;
     }
 
 }
