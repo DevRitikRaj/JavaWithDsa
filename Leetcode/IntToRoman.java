@@ -2,51 +2,41 @@ package Leetcode;
 
 public class IntToRoman {
 
-    public static char value(int n){
-
-        switch (n) {
-            case 1: return 'I';
-            case 5: return 'V';
-            case 10: return 'X';
-            case 50: return 'L';
-            case 100: return 'C';
-            case 500: return 'D';
-            case 1000: return 'M';         
-            default : return 0;
-                
-        }
-       
-        
-    }
-    public static int  Conv(String str){
-        int n=str.length();
-        int sum=0;
-        for(int i=0;i<n;i++){
-            char ch1=str.charAt(i);
-
-            if((i+1)<n && value(ch1)< value(str.charAt(i+1))){
-                sum=sum-value(ch1);
-            }
-            else{
-                sum=sum+value(ch1);
+    public static String Roman(int num) {
+        StringBuilder sb = new StringBuilder();
+        int times = 0;
+        String[] romans = new String[] { "I", "IV", "V", "IX", "X", "XL", "L",
+                "XC", "C", "CD", "D", "CM", "M" };
+        int[] ints = new int[] { 1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500,
+                900, 1000 };
+        for (int i = ints.length - 1; i >= 0; i--) {
+            times = num / ints[i];
+            num %= ints[i];
+            while (times > 0) {
+                sb.append(romans[i]);
+                times--;
             }
         }
-
-        return sum;
-        
-
-    }
-
+        return sb.toString();
+    } 
 
 
 
 
 
     public static void main(String [] args){
-        int res=Conv("VI");
-        System.out.println("The result is "+res);
+        String res=Roman(12);
+        System.out.println(res);
 
-    }
-
+                
     
 }
+}
+
+
+
+
+
+    
+    
+
