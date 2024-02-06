@@ -2,7 +2,6 @@ package Backtracking;
 
 public class ChangeArray {
 
-
     public static void  ChangeArr(int arr[], int i, int val){
 
         if(i==arr.length){
@@ -14,8 +13,6 @@ public class ChangeArray {
         arr[i]=val;
         ChangeArr(arr, i+1, val+1); // Recursion
         arr[i]=arr[i]-2;
-
-
 
     }
 
