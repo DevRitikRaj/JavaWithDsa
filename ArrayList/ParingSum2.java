@@ -12,6 +12,7 @@ public class ParingSum2 {
                 break;
             }
         }
+        
 
         int lp=bp+1;
         int rp=bp;
