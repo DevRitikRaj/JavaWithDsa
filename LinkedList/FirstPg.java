@@ -84,6 +84,23 @@ public class FirstPg {
         temp.next=newNode; // break the chain
     }
 
+    public int Remove(){
+        if(size==0){
+            // System.out.println("Empty");
+            return Integer.MIN_VALUE;
+        }
+        else if(size==1){
+            int val= head.data;
+            head=tail=null;
+            return val;
+        }
+
+        int val=head.data;
+        head=head.next;
+        size--;
+        return val;
+    }
+
     public static void main(String [] args){
         FirstPg ll =new FirstPg();
         ll.printLinkedlist();
@@ -96,7 +113,10 @@ public class FirstPg {
         ll.addlast(4);
         ll.add(2, 8);
         ll.printLinkedlist();
-        System.out.println(ll.size);
+        System.out.println(size);
+        ll.Remove();
+        ll.printLinkedlist();
+        System.out.println(size);
 
 
 
