@@ -118,6 +118,7 @@ public class FirstPg {
         ll.Remove();
         ll.printLinkedlist();
         System.out.println(size);
+        System.out.println(size);
 
 
 
