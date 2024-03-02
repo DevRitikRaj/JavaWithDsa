@@ -9,7 +9,7 @@ public class Passing_Argument {
     }
 
     public static void main(String [] args){
-        int marks[]={1,2,3};
+        int marks[]={1,2,3,4};
         Array_Arg(marks);
 
         // print our marks
