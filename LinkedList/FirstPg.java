@@ -102,6 +102,20 @@ public class FirstPg {
         return val;
     }
 
+    public int Search(int key){
+        Node temp=head;
+        int i=0;
+        while (temp !=null) {
+            if(temp.data==key){
+                return i;
+            }
+            temp=temp.next;
+                i++;
+            
+        }
+        return -1;
+    }
+
     public static void main(String [] args){
         FirstPg ll =new FirstPg();
         ll.printLinkedlist();
@@ -115,10 +129,12 @@ public class FirstPg {
         ll.add(2, 8);
         ll.printLinkedlist();
         System.out.println(size);
-        ll.Remove();
+        // ll.Remove();
         ll.printLinkedlist();
-        System.out.println(size);
-        System.out.println(size);
+        System.out.println("Total Size of the length "+size);
+        // System.out.println(size);
+        System.out.println(ll.Search(8));
+        System.out.println(ll.Search(15));
 
 
 
