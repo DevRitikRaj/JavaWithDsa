@@ -116,6 +116,34 @@ public class FirstPg {
         return -1;
     }
 
+    // Recursive Search
+
+    public int helper(Node head,int key){
+        if(head==null){
+            return -1;
+        }
+        if(head.data==key){
+            return 0;
+        }
+
+        int idx=helper(head.next, key);
+        if(idx==-1){
+            return -1;
+        }
+        return idx+1;
+
+    }
+
+
+    public int recSearch(int key){
+        return helper(head, key);
+    }
+
+
+
+
+
+
     public static void main(String [] args){
         FirstPg ll =new FirstPg();
         ll.printLinkedlist();
@@ -133,8 +161,8 @@ public class FirstPg {
         ll.printLinkedlist();
         System.out.println("Total Size of the length "+size);
         // System.out.println(size);
-        System.out.println(ll.Search(8));
-        System.out.println(ll.Search(15));
+        System.out.println(ll.recSearch(8));
+        System.out.println(ll.recSearch(15));
 
 
 
