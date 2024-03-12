@@ -139,6 +139,21 @@ public class FirstPg {
         return helper(head, key);
     }
 
+    public void reverse(){
+        Node prev=null;
+        Node curr=tail=head;
+        Node next;
+
+        while (curr !=null) {
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+            
+        }
+        head=prev;
+    }
+
 
 
 
@@ -159,11 +174,16 @@ public class FirstPg {
         System.out.println(size);
         // ll.Remove();
         ll.printLinkedlist();
-        System.out.println("Total Size of the length "+size);
+        // System.out.println("Total Size of the length "+size);
         // System.out.println(size);
-        System.out.println(ll.recSearch(8));
-        System.out.println(ll.recSearch(15));
+        // System.out.println(ll.recSearch(8));
+        // System.out.println(ll.recSearch(15));
+        ll.reverse();
+        ll.printLinkedlist();
 
+
+     
+        
 
 
     }
