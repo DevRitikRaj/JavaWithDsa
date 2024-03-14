@@ -155,6 +155,42 @@ public class FirstPg {
     }
 
 
+    // Delete from the node at the end side
+
+    //So firstly calculate the size of the linkedlist
+
+    public void removefromnthend(int n){
+        int size=0;
+        Node temp=head;
+        while (temp != null) {
+            temp=temp.next;
+            size++;
+            
+        }
+
+
+        //When n== size means lastNode
+
+        if(n==size){
+            head=head.next;
+            return;
+        }
+
+        //Remove from n node
+        int i=1;
+        int idx=size-n;
+        Node prev=head;
+
+        while (i<idx) {
+            prev=prev.next;
+            i++;
+            
+        }
+        prev.next=prev.next.next;
+
+    }
+
+
 
 
 
@@ -178,7 +214,9 @@ public class FirstPg {
         // System.out.println(size);
         // System.out.println(ll.recSearch(8));
         // System.out.println(ll.recSearch(15));
-        ll.reverse();
+        // ll.reverse();
+        ll.removefromnthend(5);
+
         ll.printLinkedlist();
 
 
