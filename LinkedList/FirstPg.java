@@ -190,6 +190,67 @@ public class FirstPg {
 
     }
 
+    // Number is Pallidrome------------------  121 ----> 121
+
+    // By using slow fast approach
+
+    public Node FindMid(Node head){
+        Node slow=head;
+        Node fast=head;
+
+        while (fast!=null && fast.next!=null) {
+            slow=slow.next;
+            fast=fast.next.next;
+            
+        }
+        return slow;  // is my Mid
+    }
+
+    public boolean CheckPallidrome(){
+
+        if(head==null || head.next==null){
+            return true;
+
+        }
+
+        // Step 1 -> to find the mid
+        Node midNode=FindMid(head);
+
+
+
+
+        // step 2 -> Reverse 2nd Half
+
+        Node prev=null;
+        Node curr=midNode;
+        Node next;
+        while (curr!=null) {
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+            
+        }
+        Node right=prev;
+        Node left=head;
+
+
+
+
+        // Step 3 -> Check or Compare  1st ad 2nd half
+        while (right!=null) {
+            if(left.data != right.data){
+                return false;
+            }
+            left=left.next;
+            right=right.next;
+            
+        }
+        return true;
+
+
+    }
+
 
 
 
@@ -198,15 +259,17 @@ public class FirstPg {
     public static void main(String [] args){
         FirstPg ll =new FirstPg();
         ll.printLinkedlist();
-        ll.addFirst(2);
-        ll.printLinkedlist();
         ll.addFirst(1);
-        ll.printLinkedlist();
-        ll.addlast(3);
-        ll.printLinkedlist();
-        ll.addlast(4);
-        ll.add(2, 8);
-        ll.printLinkedlist();
+        ll.addFirst(2);
+        ll.addFirst(2);
+        // ll.printLinkedlist();
+        // ll.addFirst(2);
+        // ll.printLinkedlist();
+        // ll.addlast(3);
+        // ll.printLinkedlist();
+        // ll.addlast(4);
+        // ll.add(2, 8);
+        // ll.printLinkedlist();
         System.out.println(size);
         // ll.Remove();
         ll.printLinkedlist();
@@ -215,9 +278,11 @@ public class FirstPg {
         // System.out.println(ll.recSearch(8));
         // System.out.println(ll.recSearch(15));
         // ll.reverse();
-        ll.removefromnthend(5);
+        // ll.removefromnthend(5);
 
         ll.printLinkedlist();
+        System.out.println(ll.CheckPallidrome());
+
 
 
      
